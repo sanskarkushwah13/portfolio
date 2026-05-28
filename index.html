@@ -4,231 +4,311 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sanskar Kushwah | Portfolio</title>
-  <link rel="stylesheet" href="./style.css?v=2">
+
+  <meta name="description" content="Portfolio of Sanskar Kushwah, M.Tech Computer Science student focused on machine learning, data science, and computer vision.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#home">SK</a>
-    <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+
+  <header class="hero" id="home">
+    <nav class="navbar container">
+      <a class="logo" href="#home">SANS<span>KAR</span></a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#work">Work</a>
+        <a href="#statistics">Statistics</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
+
+    <div class="hero-content container">
+      <div class="profile-ring">
+        <div class="profile-photo">SK</div>
+      </div>
+
+      <div>
+        <h1 class="hero-title">Hello I'm Sanskar Kushwah!</h1>
+        <p class="hero-subtitle">
+          M.Tech Computer Science student focused on data science, machine learning, and computer vision.
+        </p>
+
+        <div class="connect-row">
+          <p>Let's connect</p>
+          <span>&gt;</span>
+
+          <div class="social-links">
+            <a href="mailto:Sanskarkushwah13@gmail.com">EM</a>
+            <a href="https://www.linkedin.com/in/sanskarkushwah13/" target="_blank">IN</a>
+            <a href="https://github.com/sanskarkushwah13" target="_blank">GH</a>
+            <a class="button" href="sanskar_CV.pdf" target="_blank">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <p class="eyebrow">Data Science / Machine Learning / Computer Vision</p>
-        <h1>Sanskar Kushwah</h1>
-        <p class="hero-copy">
-          M.Tech Computer Science student at NIT Srinagar building machine learning,
-          computer vision, and data-driven systems for real-world decision making.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#projects">View Projects</a>
-          <a class="button secondary" href="sanskar_CV.pdf" target="_blank">Download CV</a>
-        </div>
-      </div>
 
-      <div class="hero-visual">
-        <div class="profile-card">
-          <div class="avatar">SK</div>
-          <div>
-            <p class="card-title">ML Engineer in progress</p>
-            <p class="card-subtitle">Python, AI, EDA, Computer Vision</p>
+    <section class="section light" id="about">
+      <div class="container split">
+        <div>
+          <h2 class="section-title">Who am I?</h2>
+          <p class="lead">
+            I'm Sanskar Kushwah, a Computer Science student and Machine Learning enthusiast.
+          </p>
+          <p class="body-copy">
+            I am pursuing a Master of Technology in Computer Science at the National Institute of Technology, Srinagar.
+            My work combines machine learning, image-based modelling, data analysis, and practical software development.
+            I enjoy solving problems where algorithms, data, and clean implementation meet.
+          </p>
+
+          <div class="about-actions">
+            <span>Connect with me</span>
+            <span>&gt;</span>
+
+            <div class="social-links">
+              <a href="mailto:Sanskarkushwah13@gmail.com">EM</a>
+              <a href="https://www.linkedin.com/in/sanskarkushwah13/" target="_blank">IN</a>
+              <a href="https://github.com/sanskarkushwah13" target="_blank">GH</a>
+            </div>
           </div>
         </div>
 
-        <div class="chart-panel">
-          <span style="--height: 48%"></span>
-          <span style="--height: 72%"></span>
-          <span style="--height: 58%"></span>
-          <span style="--height: 86%"></span>
-          <span style="--height: 66%"></span>
-        </div>
+        <div class="skills-list">
+          <div>
+            <div class="skill-top">
+              <span>Machine Learning</span>
+              <strong>90%</strong>
+            </div>
+            <div class="bar"><span style="--value: 90%"></span></div>
+          </div>
 
-        <div class="metric-strip">
-          <div><strong>GATE DA</strong><span>AIR 6918</span></div>
-          <div><strong>Focus</strong><span>Vision AI</span></div>
-          <div><strong>Tools</strong><span>Python, SQL, Cloud</span></div>
-        </div>
-      </div>
-    </section>
+          <div>
+            <div class="skill-top">
+              <span>Python</span>
+              <strong>88%</strong>
+            </div>
+            <div class="bar"><span style="--value: 88%"></span></div>
+          </div>
 
-    <section class="section two-column" id="about">
-      <div>
-        <p class="section-label">About</p>
-        <h2>Research-minded developer with a strong data science foundation.</h2>
-      </div>
-      <div class="section-copy">
-        <p>
-          I am pursuing a Master of Technology in Computer Science at the National
-          Institute of Technology, Srinagar. My work combines machine learning,
-          image-based modelling, data analysis, and practical software development.
-        </p>
-        <p>
-          I enjoy solving problems where algorithms, data, and clean implementation
-          meet, especially in computer vision, analytics, and predictive modelling.
-        </p>
-      </div>
-    </section>
+          <div>
+            <div class="skill-top">
+              <span>Data Analysis</span>
+              <strong>85%</strong>
+            </div>
+            <div class="bar"><span style="--value: 85%"></span></div>
+          </div>
 
-    <section class="section">
-      <p class="section-label">Education and Experience</p>
-      <div class="timeline">
-        <article class="timeline-item">
-          <span>2024 - Present</span>
-          <h3>Master of Technology, Computer Science</h3>
-          <p>National Institute of Technology, Srinagar</p>
-        </article>
-
-        <article class="timeline-item">
-          <span>2020 - 2024</span>
-          <h3>B.Tech, Computer Science</h3>
-          <p>Institute of Technology & Management, Gwalior under R.G.P.V.</p>
-        </article>
-
-        <article class="timeline-item">
-          <span>Jul 2022 - Aug 2022</span>
-          <h3>Data Analyst Intern</h3>
-          <p>
-            SML2029 Research and Development. Built a breast cancer prediction
-            workflow using image datasets, Pandas, OpenCV, CNN models, and sklearn metrics.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="projects">
-      <div class="section-heading">
-        <p class="section-label">Projects</p>
-        <h2>Selected work</h2>
-      </div>
-
-      <div class="project-grid">
-        <article class="project-card">
-          <p class="project-type">Research Project</p>
-          <h3>A Comparative Study of Loss Functions for Image-Based Tasks</h3>
-          <p>
-            Compared traditional and advanced loss functions across classification,
-            segmentation, and generation using UTKFace, LUNA16, CelebA, ResNet,
-            U-Net, and DCGAN under identical conditions.
-          </p>
-          <span>Oct 2025 - Present</span>
-        </article>
-
-        <article class="project-card">
-          <p class="project-type">Computer Vision</p>
-          <h3>Semantic Segmentation for Cricket Sport Analytics</h3>
-          <p>
-            Built semantic segmentation models with 9 classes for cricket analytics
-            and visual scene understanding.
-          </p>
-          <a href="https://github.com/sanskarkushwah13/Semantic-Segmentation-for-Cricket-sport-analytics-" target="_blank">
-            View GitHub
-          </a>
-        </article>
-
-        <article class="project-card">
-          <p class="project-type">Machine Learning</p>
-          <h3>Job Prediction by Machine Learning</h3>
-          <p>
-            Created a platform to help students identify suitable career paths by
-            predicting job opportunities from required skills.
-          </p>
-          <a href="https://github.com/sanskarkushwah13/career-prediction-by-machine-learning" target="_blank">
-            View GitHub
-          </a>
-        </article>
-
-        <article class="project-card">
-          <p class="project-type">Deep Learning</p>
-          <h3>Breast Cancer Prediction</h3>
-          <p>
-            Processed medical image datasets into train, test, and validation sets,
-            then implemented CNN models for accurate classification.
-          </p>
-          <a href="https://github.com/sanskarkushwah13/cancer_prediction" target="_blank">
-            View GitHub
-          </a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="skills">
-      <div class="section-heading">
-        <p class="section-label">Skills</p>
-        <h2>Technical toolkit</h2>
-      </div>
-
-      <div class="skills-grid">
-        <div>
-          <h3>Data Science</h3>
-          <p>Machine Learning, AI, Data Visualization, Power BI, EDA</p>
-        </div>
-
-        <div>
-          <h3>Programming</h3>
-          <p>Python, C/C++, SQL, JavaScript, HTML/CSS, R</p>
-        </div>
-
-        <div>
-          <h3>Tools</h3>
-          <p>Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse</p>
-        </div>
-
-        <div>
-          <h3>Soft Skills</h3>
-          <p>Critical Thinking, Problem Solving, Communication</p>
+          <div>
+            <div class="skill-top">
+              <span>HTML & CSS</span>
+              <strong>80%</strong>
+            </div>
+            <div class="bar"><span style="--value: 80%"></span></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <p class="section-label">Certificates and Achievements</p>
+    <section class="section" id="services">
+      <div class="container center">
+        <h2 class="section-title">Here's what I'm good at</h2>
+        <p class="section-subtitle">These are the areas I work in</p>
 
-      <div class="achievement-list">
-        <article>
-          <h3>GATE Data Science and Artificial Intelligence</h3>
-          <p>Achieved All India Rank 6918 in GATE DA.</p>
-        </article>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-icon">ML</div>
+            <h3>Machine Learning</h3>
+            <p>Building predictive models and solving data-driven problems with Python and ML workflows.</p>
+          </article>
 
-        <article>
-          <h3>AWS Academy Graduate</h3>
-          <p>Completed AWS Academy Cloud with EC2, S3, Lambda, and RDS fundamentals.</p>
-        </article>
+          <article class="card">
+            <div class="card-icon">CV</div>
+            <h3>Computer Vision</h3>
+            <p>Working on image classification, segmentation, CNN models, and image dataset preparation.</p>
+          </article>
 
-        <article>
-          <h3>AICTE Altrexy Certification</h3>
-          <p>Certified in Data Analytic Process Automation.</p>
-        </article>
+          <article class="card">
+            <div class="card-icon">DA</div>
+            <h3>Data Analysis</h3>
+            <p>Exploratory data analysis, visualization, automation, and insights for better decisions.</p>
+          </article>
 
-        <article>
-          <h3>Business English Certificate Preliminary</h3>
-          <p>Awarded by Cambridge English for professional English communication.</p>
-        </article>
+          <article class="card">
+            <div class="card-icon">AI</div>
+            <h3>Artificial Intelligence</h3>
+            <p>Researching AI methods and applying models to practical academic and project use cases.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">DB</div>
+            <h3>SQL & Databases</h3>
+            <p>Using SQL and structured data tools to store, query, and analyze information efficiently.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">WEB</div>
+            <h3>Web Basics</h3>
+            <p>Creating clean frontend pages with HTML, CSS, JavaScript, and responsive layouts.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="contact-section" id="contact">
-      <div>
-        <p class="section-label">Contact</p>
-        <h2>Let us build something data-driven.</h2>
-      </div>
+    <section class="section light" id="portfolio">
+      <div class="container center">
+        <h2 class="section-title">Check out my portfolio</h2>
+        <p class="section-subtitle">Here are some projects I have worked on</p>
 
-      <div class="contact-links">
-        <a href="mailto:Sanskarkushwah13@gmail.com">Sanskarkushwah13@gmail.com</a>
-        <a href="tel:+918602547457">+91 8602547457</a>
-        <a href="https://www.linkedin.com/in/sanskarkushwah13/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/sanskarkushwah13" target="_blank">GitHub</a>
+        <div class="project-grid">
+          <article class="project">
+            <p class="project-label">Research Project</p>
+            <h3>A Comparative Study of Loss Functions for Image-Based Tasks</h3>
+            <p>
+              Compared traditional and advanced loss functions across classification,
+              segmentation, and generation using UTKFace, LUNA16, CelebA, ResNet,
+              U-Net, and DCGAN.
+            </p>
+          </article>
+
+          <article class="project">
+            <p class="project-label">Computer Vision</p>
+            <h3>Semantic Segmentation for Cricket Sport Analytics</h3>
+            <p>
+              Built semantic segmentation models with 9 classes for cricket analytics
+              and visual scene understanding.
+            </p>
+            <a href="https://github.com/sanskarkushwah13/Semantic-Segmentation-for-Cricket-sport-analytics-" target="_blank">View GitHub</a>
+          </article>
+
+          <article class="project">
+            <p class="project-label">Machine Learning</p>
+            <h3>Job Prediction by Machine Learning</h3>
+            <p>
+              Created a platform to help students identify suitable career paths by
+              predicting job opportunities from required skills.
+            </p>
+            <a href="https://github.com/sanskarkushwah13/career-prediction-by-machine-learning" target="_blank">View GitHub</a>
+          </article>
+
+          <article class="project">
+            <p class="project-label">Deep Learning</p>
+            <h3>Breast Cancer Prediction</h3>
+            <p>
+              Processed medical image datasets into train, test, and validation sets,
+              then implemented CNN models for classification.
+            </p>
+            <a href="https://github.com/sanskarkushwah13/cancer_prediction" target="_blank">View GitHub</a>
+          </article>
+        </div>
       </div>
     </section>
+
+    <section class="section" id="work">
+      <div class="container center">
+        <h2 class="section-title">My work experience</h2>
+        <p class="section-subtitle">Education, internship, and training</p>
+
+        <div class="work-list">
+          <article class="work-item">
+            <div class="date">2024 - Present</div>
+            <div>
+              <h3>Master of Technology, Computer Science</h3>
+              <p>National Institute of Technology, Srinagar.</p>
+            </div>
+          </article>
+
+          <article class="work-item">
+            <div class="date">2020 - 2024</div>
+            <div>
+              <h3>B.Tech, Computer Science</h3>
+              <p>Institute of Technology & Management, Gwalior under R.G.P.V.</p>
+            </div>
+          </article>
+
+          <article class="work-item">
+            <div class="date">Jul 2022 - Aug 2022</div>
+            <div>
+              <h3>Data Analyst Intern</h3>
+              <p>
+                SML2029 Research and Development. Developed a breast cancer prediction workflow
+                using image datasets, Pandas, OpenCV, CNN models, and sklearn metrics.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section stats" id="statistics">
+      <div class="container stats-grid">
+        <div class="stat">
+          <strong>4</strong>
+          <span>Projects</span>
+        </div>
+
+        <div class="stat">
+          <strong>6918</strong>
+          <span>GATE DA AIR</span>
+        </div>
+
+        <div class="stat">
+          <strong>6+</strong>
+          <span>Core Skills</span>
+        </div>
+
+        <div class="stat">
+          <strong>4</strong>
+          <span>Certificates</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container center">
+        <h2 class="section-title">Contact me</h2>
+        <p class="section-subtitle">Have any questions or opportunities?</p>
+
+        <div class="contact-box">
+          <div class="contact-item">
+            <span>Phone</span>
+            <strong>+91 8602547457</strong>
+          </div>
+
+          <div class="contact-item">
+            <span>Email</span>
+            <a href="mailto:Sanskarkushwah13@gmail.com">Sanskarkushwah13@gmail.com</a>
+          </div>
+
+          <div class="contact-item">
+            <span>LinkedIn</span>
+            <a href="https://www.linkedin.com/in/sanskarkushwah13/" target="_blank">sanskarkushwah13</a>
+          </div>
+
+          <div class="contact-item">
+            <span>GitHub</span>
+            <a href="https://github.com/sanskarkushwah13" target="_blank">sanskarkushwah13</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
-    <p>2026 Sanskar Kushwah. Built with HTML and CSS.</p>
+    <div class="container">
+      <p>2026 Sanskar Kushwah. All rights reserved.</p>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
