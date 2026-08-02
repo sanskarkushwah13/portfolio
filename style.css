@@ -146,6 +146,13 @@ a {
   padding: 60px 0 120px;
 }
 
+.profile-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
 .profile-ring {
   width: 300px;
   aspect-ratio: 1;
@@ -158,17 +165,52 @@ a {
 }
 
 .profile-photo {
+  position: relative;
   width: 260px;
   aspect-ratio: 1;
   display: grid;
   place-items: center;
   border-radius: 50%;
+  overflow: hidden;
   background:
     radial-gradient(circle at 35% 30%, #ffffff, #d8d2ff 35%, #7258df 100%);
   color: var(--primary-dark);
   font-family: "Raleway", Arial, sans-serif;
   font-size: 5.2rem;
   font-weight: 800;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.profile-photo.has-image .profile-image {
+  display: block;
+}
+
+.profile-photo.has-image #profileInitials {
+  display: none;
+}
+
+.upload-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.upload-box input {
+  display: none;
 }
 
 .hero-title {
@@ -430,6 +472,40 @@ a {
   margin-top: 42px;
 }
 
+.repo-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 42px;
+  text-align: left;
+}
+
+.repo-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.repo-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+}
+
+.repo-item strong {
+  color: var(--primary);
+}
+
+.repo-item span {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .gallery-card {
   padding: 22px;
   background: var(--surface);
@@ -603,6 +679,7 @@ footer {
   .project-grid,
   .card-grid,
   .gallery-grid,
+  .repo-list,
   .stats-grid,
   .contact-box,
   .work-item {

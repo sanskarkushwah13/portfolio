@@ -1,5 +1,9 @@
 const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 const themeToggle = document.getElementById('themeToggle');
+const photoUpload = document.getElementById('photoUpload');
+const profilePhoto = document.getElementById('profilePhoto');
+const profileImage = document.getElementById('profileImage');
+const profileInitials = document.getElementById('profileInitials');
 const sections = document.querySelectorAll('section[id], header[id]');
 
 function updateThemeButton() {
@@ -39,6 +43,25 @@ if (themeToggle) {
     const isDark = document.body.classList.toggle('dark');
     localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light');
     updateThemeButton();
+  });
+}
+
+if (photoUpload && profilePhoto && profileImage && profileInitials) {
+  photoUpload.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+
+    if (!file) return;
+
+    const reader = new FileReader();
+
+    reader.onload = () => {
+      profileImage.src = reader.result;
+      profileImage.hidden = false;
+      profilePhoto.classList.add('has-image');
+      profileInitials.hidden = true;
+    };
+
+    reader.readAsDataURL(file);
   });
 }
 
