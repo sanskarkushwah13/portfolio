@@ -1,7 +1,8 @@
 :root {
   --primary: #6a4dff;
   --primary-dark: #2f2180;
-  --yellow: #ffd54f;
+  --accent: #ffd54f;
+  --accent-dark: #b8871d;
   --light: #f4f4fb;
   --text: #101014;
   --muted: #64748b;
@@ -31,7 +32,8 @@ body {
 body.dark {
   --primary: #8b7dff;
   --primary-dark: #d8ceff;
-  --yellow: #ffdc73;
+  --accent: #ffdc73;
+  --accent-dark: #c2a55d;
   --light: #07111d;
   --text: #f8fafc;
   --muted: #9fb0ce;
@@ -84,7 +86,8 @@ a {
   padding: 32px 0;
 }
 
-.theme-toggle {
+.theme-toggle,
+.accent-toggle {
   border: 0;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.16);
@@ -95,9 +98,16 @@ a {
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.theme-toggle:hover {
+.theme-toggle:hover,
+.accent-toggle:hover {
   transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.24);
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .logo {
@@ -109,7 +119,7 @@ a {
 }
 
 .logo span {
-  color: var(--yellow);
+  color: var(--accent);
 }
 
 .nav-links {
@@ -131,7 +141,7 @@ a {
 
 .nav-links a:hover,
 .nav-links a.active {
-  border-color: var(--yellow);
+  border-color: var(--accent);
 }
 
 .hero-content {
@@ -239,7 +249,7 @@ a {
 }
 
 .connect-row span {
-  color: var(--yellow);
+  color: var(--accent);
   font-size: 1.8rem;
   line-height: 1;
 }
@@ -267,12 +277,12 @@ a {
 }
 
 .social-links a:hover {
-  color: var(--yellow);
-  border-color: var(--yellow);
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 .button {
-  background: var(--yellow);
+  background: var(--accent);
   color: var(--primary-dark);
 }
 
@@ -320,7 +330,7 @@ a {
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 28px;
-  color: var(--primary);
+  color: var(--accent);
   font-family: "Raleway", Arial, sans-serif;
   font-weight: 800;
   text-transform: uppercase;
@@ -451,7 +461,7 @@ a {
 
 .project-label {
   margin: 0 0 12px;
-  color: var(--primary);
+  color: var(--accent);
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -583,7 +593,7 @@ a {
   display: block;
   font-family: "Raleway", Arial, sans-serif;
   font-size: 3rem;
-  color: var(--yellow);
+  color: var(--accent);
 }
 
 .stat span {
@@ -618,7 +628,7 @@ a {
 
 .contact-item a,
 .contact-item strong {
-  color: var(--primary);
+  color: var(--accent);
   font-weight: 800;
   overflow-wrap: anywhere;
 }

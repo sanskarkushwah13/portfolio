@@ -46,6 +46,39 @@ if (themeToggle) {
   });
 }
 
+const accentToggle = document.getElementById('accentToggle');
+const accentOptions = [
+  { accent: '#ffd54f', accentDark: '#b8871d' },
+  { accent: '#22c55e', accentDark: '#166534' },
+  { accent: '#38bdf8', accentDark: '#0369a1' },
+  { accent: '#f472b6', accentDark: '#be185d' }
+];
+
+function applyAccent(index) {
+  const accent = accentOptions[index] || accentOptions[0];
+  document.documentElement.style.setProperty('--accent', accent.accent);
+  document.documentElement.style.setProperty('--accent-dark', accent.accentDark);
+  localStorage.setItem('portfolio-accent', String(index));
+  if (accentToggle) {
+    accentToggle.textContent = `🎨`;
+    accentToggle.setAttribute('aria-label', `Change accent color (current ${accent.accent})`);
+  }
+}
+
+function applySavedAccent() {
+  const savedAccent = Number(localStorage.getItem('portfolio-accent'));
+  const index = Number.isInteger(savedAccent) && savedAccent >= 0 && savedAccent < accentOptions.length ? savedAccent : 0;
+  applyAccent(index);
+}
+
+if (accentToggle) {
+  accentToggle.addEventListener('click', () => {
+    const currentAccent = Number(localStorage.getItem('portfolio-accent')) || 0;
+    const nextAccent = (currentAccent + 1) % accentOptions.length;
+    applyAccent(nextAccent);
+  });
+}
+
 if (photoUpload && profilePhoto && profileImage && profileInitials) {
   photoUpload.addEventListener('change', (event) => {
     const file = event.target.files[0];
