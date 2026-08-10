@@ -23,6 +23,8 @@
         <a href="#about">About Me </a>
         <a href="#services">How I can Help you</a>
         <a href="#portfolio">Portfolio</a>
+        <a href="#research-papers">Research</a>
+        <a href="#academic">Academic</a>
         <a href="#gallery">Gallery</a>
         <a href="#work">Work</a>
         <a href="#statistics">Statistics</a>
@@ -225,6 +227,254 @@
               then implemented CNN models for classification.
             </p>
             <a href="https://github.com/sanskarkushwah13/cancer_prediction" target="_blank">View GitHub</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="research-papers">
+      <div class="container center">
+        <h2 class="section-title">Research Papers</h2>
+        <p class="section-subtitle">Published research and academic contributions</p>
+
+        <article class="research-paper">
+          <div class="paper-header">
+            <h3>On the Influence of Adversarial Loss Functions on Standard DCGAN-Based Image Synthesis</h3>
+            <p class="paper-authors">Sanskar Kushwah | M.Tech Thesis | NIT Srinagar</p>
+          </div>
+
+          <div class="paper-content">
+            <section class="paper-section">
+              <h4>Abstract</h4>
+              <p>Generative adversarial networks (GANs) have proved remarkably successful in realistic image synthesis. However, the choice of adversarial loss function remains a key factor influencing image quality, convergence behavior, and training stability. This paper presents a controlled cross-domain and systematic empirical assessment of five widely used adversarial loss functions, namely Standard GAN, Least Squares GAN (LSGAN), Wasserstein GAN (WGAN), Wasserstein GAN with Gradient Penalty (WGAN-GP), and Hinge GAN, on the training dynamics and generative performance of standard Deep Convolutional GAN (DCGAN) architecture while holding the generator and discriminator architectures, optimization hyperparameters, and training schedules constant. The models are evaluated on three representative datasets spanning natural, remote sensing, and medical imaging domains: CIFAR-10, EuroSAT, and CheXpert. Performance is assessed using Fréchet inception distance (FID), mode variance, and training stability analysis. Experimental results show that LSGAN achieves the most consistent optimization and image quality across the evaluated datasets, while WGAN-GP performs best on CIFAR-10. WGAN consistently preserves the highest sample diversity, highlighting a trade-off between image fidelity and diversity.</p>
+            </section>
+
+            <section class="paper-section">
+              <h4>Keywords</h4>
+              <p>Generative Adversarial Networks (GANs), Adversarial Loss Functions, Deep Convolutional GAN (DCGAN), Image Synthesis, Training Stability, Fréchet Inception Distance (FID), Mode Variance, Cross-Domain Evaluation, CIFAR-10, EuroSAT, CheXpert</p>
+            </section>
+
+            <section class="paper-section">
+              <h4>Introduction</h4>
+              <p>Deep learning has revolutionized image and video processing by utilizing multi-layer neural networks to automatically extract meaningful features from raw data. Deep generative models have emerged as a powerful class of techniques capable of learning from existing data and generating new samples with similar characteristics. Among these models, Generative Adversarial Networks (GANs) have gained significant attention due to their remarkable ability to synthesize realistic images.</p>
+              <p>A GAN consists of two neural networks: a generator, which creates synthetic images from randomly generated input values, and a discriminator, which attempts to distinguish between real images and synthetic images produced by the generator. During training, the generator learns to produce increasingly realistic images, while the discriminator learns to better identify synthetic images.</p>
+              <p><strong>Main Contributions:</strong></p>
+              <ul>
+                <li>Five standard GAN objective functions are compared on an identical DCGAN architecture. This isolates the effect of the objective function on network training, removing architectural and hyperparameter biases.</li>
+                <li>All experiments are performed on three visually distinct datasets (CIFAR-10, EuroSAT, and CheXpert), enabling a comprehensive cross-domain benchmarking of GAN loss functions across natural-image, remote-sensing, and medical-imaging domains.</li>
+              </ul>
+            </section>
+
+            <section class="paper-section">
+              <h4>Key Findings</h4>
+              <table class="results-table">
+                <thead>
+                  <tr>
+                    <th>Dataset</th>
+                    <th>Best Performing Loss</th>
+                    <th>Best FID Score</th>
+                    <th>Training Stability</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>CIFAR-10</td>
+                    <td>WGAN-GP</td>
+                    <td>58.86</td>
+                    <td>Excellent</td>
+                  </tr>
+                  <tr>
+                    <td>EuroSAT</td>
+                    <td>LSGAN</td>
+                    <td>39.75</td>
+                    <td>Excellent</td>
+                  </tr>
+                  <tr>
+                    <td>CheXpert</td>
+                    <td>LSGAN</td>
+                    <td>0.04</td>
+                    <td>Excellent</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p><strong>Key Observations:</strong></p>
+              <ul>
+                <li><strong>LSGAN</strong> achieves the most consistent optimization and image quality across the evaluated datasets, with smooth convergence and balanced loss evolution.</li>
+                <li><strong>WGAN-GP</strong> performs exceptionally well on CIFAR-10 with the best FID score of 58.86, demonstrating strong performance on natural image datasets.</li>
+                <li><strong>WGAN</strong> consistently preserves the highest sample diversity across all datasets, highlighting a trade-off between image quality and diversity.</li>
+                <li><strong>Standard GAN</strong> consistently exhibits the least stable training, characterized by discriminator dominance, oscillatory behavior, or persistent divergence.</li>
+                <li><strong>Hinge GAN</strong> provides competitive performance with lower computational overhead compared to WGAN-GP.</li>
+              </ul>
+            </section>
+
+            <section class="paper-section">
+              <h4>Methodology</h4>
+              <p><strong>Datasets Evaluated:</strong></p>
+              <ul>
+                <li><strong>CIFAR-10:</strong> 60,000 color images of 32×32 pixels belonging to 10 object classes. A widely used benchmark for image generation models.</li>
+                <li><strong>EuroSAT:</strong> 27,000 Sentinel-2 multispectral satellite images of 64×64 pixels belonging to 10 land-cover classes. Represents remote sensing domain.</li>
+                <li><strong>CheXpert:</strong> 191,027 frontal chest radiographs annotated for 14 thoracic pathologies. Represents medical imaging domain.</li>
+              </ul>
+              <p><strong>DCGAN Architecture:</strong></p>
+              <ul>
+                <li>Generator: Maps 100-dimensional latent vector to 64×64 RGB image using transposed convolutional layers</li>
+                <li>Discriminator: Takes 64×64 RGB image as input and outputs scalar value using strided convolutional layers</li>
+                <li>Training: 100 epochs on CIFAR-10 and CheXpert; 150 epochs on EuroSAT with batch size 64 (128 for CheXpert)</li>
+                <li>Evaluation: FID computed every 10 epochs using 2000 generated samples</li>
+              </ul>
+            </section>
+
+            <section class="paper-section">
+              <h4>Loss Functions Analyzed</h4>
+              <div class="loss-functions">
+                <div class="loss-item">
+                  <h5>1. Standard GAN (Binary Cross-Entropy)</h5>
+                  <p>The original GAN objective using binary cross-entropy loss. Simple to implement but suffers from vanishing gradients and unstable training.</p>
+                </div>
+                <div class="loss-item">
+                  <h5>2. Least Squares GAN (LSGAN)</h5>
+                  <p>Replaces BCE with least-squares objective. Provides smoother gradients, encourages better distribution matching, and results in more stable training.</p>
+                </div>
+                <div class="loss-item">
+                  <h5>3. Wasserstein GAN (WGAN)</h5>
+                  <p>Uses Wasserstein-1 distance (Earth Mover's distance) instead of JS divergence. Provides more stable training and meaningful learning signals.</p>
+                </div>
+                <div class="loss-item">
+                  <h5>4. WGAN with Gradient Penalty (WGAN-GP)</h5>
+                  <p>Replaces weight clipping with differentiable gradient penalty. Preserves critic expressiveness while enforcing Lipschitz constraint, enabling superior stability.</p>
+                </div>
+                <div class="loss-item">
+                  <h5>5. Hinge Loss GAN</h5>
+                  <p>Adopts SVM-inspired hinge loss with margin-based criterion. Provides stable optimization and effective gradient propagation for both generator and discriminator.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="paper-section">
+              <h4>Evaluation Metrics</h4>
+              <ul>
+                <li><strong>Fréchet Inception Distance (FID):</strong> Measures distance between feature distributions of real and generated images. Lower is better.</li>
+                <li><strong>Mode Variance:</strong> Measures diversity of generated samples in feature space. Higher indicates greater diversity.</li>
+                <li><strong>Training Stability:</strong> Analyzed through generator and discriminator loss trajectories over training epochs.</li>
+              </ul>
+            </section>
+
+            <section class="paper-section">
+              <h4>Conclusions</h4>
+              <p>This comprehensive cross-domain evaluation provides practical guidance for selecting adversarial loss functions for diverse image generation tasks:</p>
+              <ul>
+                <li><strong>For consistent performance:</strong> Choose LSGAN for stable, reliable image quality across different domains.</li>
+                <li><strong>For natural images:</strong> WGAN-GP achieves excellent FID scores on CIFAR-10.</li>
+                <li><strong>For diversity:</strong> WGAN preserves the highest sample diversity across all datasets.</li>
+                <li><strong>For efficiency:</strong> Hinge GAN provides competitive performance with lower computational overhead.</li>
+                <li>The findings highlight fundamental trade-offs between image quality, sample diversity, and training stability that practitioners must consider when selecting loss functions for their applications.</li>
+              </ul>
+            </section>
+
+            <div class="paper-links">
+              <a href="https://github.com/sanskarkushwah13/Comparative-Analysis-of-GAN-Loss-Functions" target="_blank" class="paper-link">View Implementation on GitHub</a>
+              <a href="https://github.com/sanskarkushwah13/Comparative-Analysis-of-GAN-Loss-Functions" target="_blank" class="paper-link">Experimental Results</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section light" id="academic">
+      <div class="container center">
+        <h2 class="section-title">Academic Specialization</h2>
+        <p class="section-subtitle">Core topics and focus areas by degree level</p>
+
+        <div class="academic-grid">
+          <article class="academic-card">
+            <div class="academic-header">
+              <h3>B.Tech in Computer Science</h3>
+              <p class="academic-period">2020 - 2024</p>
+              <p class="academic-institution">Institute of Technology & Management, Gwalior (RGPV)</p>
+            </div>
+            <div class="academic-topics">
+              <h4>Core Topics</h4>
+              <ul class="topics-list">
+                <li>Data Structures & Algorithms</li>
+                <li>Object-Oriented Programming (OOP)</li>
+                <li>Database Management Systems</li>
+                <li>Operating Systems</li>
+                <li>Computer Networks</li>
+                <li>Web Development</li>
+                <li>Software Engineering</li>
+                <li>System Design</li>
+              </ul>
+            </div>
+            <div class="academic-specialization">
+              <h4>Specialization</h4>
+              <ul class="topics-list">
+                <li>Fundamental programming concepts</li>
+                <li>Full-stack web development basics</li>
+                <li>Relational database design</li>
+                <li>Software development lifecycle</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="academic-card">
+            <div class="academic-header">
+              <h3>M.Tech in Computer Science</h3>
+              <p class="academic-period">2024 - 2026</p>
+              <p class="academic-institution">National Institute of Technology, Srinagar</p>
+            </div>
+            <div class="academic-topics">
+              <h4>Core Topics</h4>
+              <ul class="topics-list">
+                <li>Machine Learning & Deep Learning</li>
+                <li>Computer Vision</li>
+                <li>Advanced Python Programming</li>
+                <li>Image Processing & Analysis</li>
+                <li>Neural Networks & CNN Architectures</li>
+                <li>Generative Models (GANs)</li>
+                <li>Advanced Loss Functions</li>
+                <li>Data Science & Analytics</li>
+              </ul>
+            </div>
+            <div class="academic-specialization">
+              <h4>Research Focus</h4>
+              <ul class="topics-list">
+                <li>Comparative analysis of adversarial loss functions in GANs</li>
+                <li>Cross-domain image synthesis evaluation</li>
+                <li>Training stability and convergence analysis</li>
+                <li>Medical imaging (CheXpert), remote sensing (EuroSAT), natural images (CIFAR-10)</li>
+                <li>Loss function impact on image quality and diversity</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="academic-card">
+            <div class="academic-header">
+              <h3>PhD in Artificial Intelligence</h3>
+              <p class="academic-period">2026 - Present</p>
+              <p class="academic-institution">Dr. B. R. Ambedkar National Institute of Technology, Jalandhar</p>
+            </div>
+            <div class="academic-topics">
+              <h4>Research Areas</h4>
+              <ul class="topics-list">
+                <li>Advanced Generative Models</li>
+                <li>Adversarial Learning</li>
+                <li>Computer Vision Applications</li>
+                <li>Deep Learning Optimization</li>
+                <li>Multi-Domain Evaluation</li>
+                <li>AI for Image Synthesis</li>
+                <li>Training Stability Research</li>
+                <li>Novel Loss Functions</li>
+              </ul>
+            </div>
+            <div class="academic-specialization">
+              <h4>Research Direction</h4>
+              <ul class="topics-list">
+                <li>Advancing GAN architectures and training methods</li>
+                <li>Improving convergence and stability in adversarial training</li>
+                <li>Cross-domain generalization in image synthesis</li>
+                <li>Practical applications in medical and remote sensing imaging</li>
+              </ul>
+            </div>
           </article>
         </div>
       </div>
