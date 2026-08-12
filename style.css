@@ -283,7 +283,12 @@ a {
 
 .button {
   background: var(--accent);
-  color: var(--primary-dark);
+  color: var(--white);
+  box-shadow: 0 14px 30px rgba(6, 182, 212, 0.18);
+}
+
+.button:hover {
+  transform: translateY(-2px);
 }
 
 .section {
@@ -401,7 +406,7 @@ a {
 
 .card:hover {
   transform: translateY(-6px);
-  background: var(--primary);
+  background: var(--accent);
   color: var(--white);
 }
 
@@ -412,10 +417,11 @@ a {
   height: 72px;
   margin: 0 auto 24px;
   border-radius: 50%;
-  background: var(--light);
-  color: var(--primary);
+  background: var(--accent);
+  color: var(--white);
   font-size: 2rem;
   font-weight: 800;
+  box-shadow: 0 18px 35px rgba(6, 182, 212, 0.18);
 }
 
 .card h3,
@@ -811,8 +817,8 @@ a {
 
 .stats {
   background:
-    linear-gradient(rgba(89, 64, 183, 0.9), rgba(89, 64, 183, 0.9)),
-    linear-gradient(135deg, #3d2c83, #7962e7);
+    linear-gradient(rgba(6, 182, 212, 0.94), rgba(6, 182, 212, 0.94)),
+    linear-gradient(135deg, #0ea5e9, #0284c7);
   color: var(--white);
 }
 
@@ -840,12 +846,12 @@ a {
   grid-template-columns: repeat(4, 1fr);
   gap: 0;
   margin-top: 48px;
-  border: 2px solid #ddd9eb;
+  border: 2px solid rgba(6, 182, 212, 0.16);
 }
 
 .contact-item {
   padding: 28px;
-  border-right: 2px solid #ddd9eb;
+  border-right: 2px solid rgba(6, 182, 212, 0.16);
 }
 
 .contact-item:last-child {
