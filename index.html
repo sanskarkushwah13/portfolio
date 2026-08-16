@@ -25,6 +25,7 @@
         <a href="#portfolio">Portfolio</a>
         <a href="#research-papers">Research</a>
         <a href="#academic">Academic</a>
+        <a href="#blog">Blog</a>
         <a href="#gallery">Gallery</a>
         <a href="#work">Work</a>
         <a href="#statistics">Statistics</a>
@@ -234,6 +235,18 @@
             </p>
             <a href="https://github.com/sanskarkushwah13/cancer_prediction" target="_blank">View GitHub</a>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG SECTION -->
+    <section class="section light" id="blog">
+      <div class="container center">
+        <h2 class="section-title">Blog & Articles</h2>
+        <p class="section-subtitle">Insights on AI, Machine Learning, and Data Science</p>
+
+        <div class="blog-grid" id="blogGrid">
+          <!-- Blog posts will be dynamically loaded here -->
         </div>
       </div>
     </section>
@@ -691,6 +704,22 @@
       <p>2026 Sanskar Kushwah.</p>
     </div>
   </footer>
+
+  <!-- Modal for project details -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Modal for blog article -->
+  <div id="blogModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div id="blogModalBody"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
